@@ -1,0 +1,39 @@
+﻿<Window x:Class="FuturesEquityCurve.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:local="clr-namespace:FuturesEquityCurve"
+        xmlns:viewmodels="clr-namespace:FuturesEquityCurve.ViewModels"
+        mc:Ignorable="d"
+        Title="期货CTP实时资金曲线" Height="600" Width="900"
+        Loaded="Window_Loaded"
+        Closing="Window_Closing">
+
+    <Window.Resources>
+        <viewmodels:EquityCurveViewModel x:Key="ViewModel"/>
+    </Window.Resources>
+
+    <Grid DataContext="{StaticResource ViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="期货CTP实时资金曲线演示" FontSize="18" FontWeight="Bold" Margin="0,0,20,0"/>
+            <Button Name="btnStart" Content="开始模拟" Width="100" Click="btnStart_Click"/>
+            <Button Name="btnStop" Content="停止模拟" Width="100" Margin="10,0,0,0" Click="btnStop_Click"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Margin="10">
+            <oxy:PlotView Model="{Binding PlotModel}"/>
+        </Border>
+
+        <StatusBar Grid.Row="2">
+            <TextBlock Text="模拟数据，非实际交易" Margin="10,0"/>
+        </StatusBar>
+    </Grid>
+</Window>

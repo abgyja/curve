@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "c8r1eTRXHWAgyzKXN/zrlkJm937/4mOC8RQw9P3RfEwPPKPaqMgB5Zwd0nv5lpJVr/grb/GyUu0HBPKrCOh01A==",
+  "success": true,
+  "projectFilePath": "E:\\ctpcurve\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\oxyplot.core\\2.2.0\\oxyplot.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\oxyplot.wpf\\2.2.0\\oxyplot.wpf.2.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\oxyplot.wpf.shared\\2.2.0\\oxyplot.wpf.shared.2.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
